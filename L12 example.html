@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>การเปลี่ยนรูปภาพแบบสุ่ม</h1>
+    <p><img id="cake" src="cake1.jpg" width="640" height="426"></p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, tenetur.</p>
+    <input type="button" value="เปลี่ยนรูปเค้ก" onclick="changeSrc()">
+    <script>
+        const images = ["cake1.jpg", "cake2.jpg", "cake3.jpg", "cake4.jpg", "cake5.jpg"];
+
+        function changeSrc(){
+            const ramdomIndex = Math.floor(Math.random() * images.length);
+            document.getElementById("cake").setAttribute("src", images[ramdomIndex]);
+        }
+    </script>
+</body>
+</html>
